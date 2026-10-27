@@ -1,0 +1,409 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Alaturka Nürtingen</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;700&family=DM+Mono:wght@500&display=swap">
+<style>
+/* Layout: Imbiss-Plakat – fette Grotesk, Rotkohl-Magenta & Kräutergrün, Sticker, ein drehender Spieß als Held */
+:root{
+  --bg:#f6f4ef;
+  --surface:#ffffff;
+  --fg:#1d1622;
+  --muted:#6a5f6e;
+  --line:#e4dfe3;
+  --cabbage:#8a2468;     /* Rotkohl */
+  --herb:#2f8a4c;        /* Petersilie */
+  --bread:#f2b632;       /* Fladenbrot */
+  --tomato:#e04a2f;
+  --on-cabbage:#fff;
+  --f-display:"Bricolage Grotesque","Arial Black",system-ui,sans-serif;
+  --f-body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"DM Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#151017;--surface:#201925;--fg:#f3edf2;--muted:#b3a7b6;--line:#33283a;--cabbage:#c24a97;--herb:#5cc27d;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#151017;--surface:#201925;--fg:#f3edf2;--muted:#b3a7b6;--line:#33283a;--cabbage:#c24a97;--herb:#5cc27d;color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:17px;line-height:1.6;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--cabbage)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--bread);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);font-weight:800;line-height:.98;letter-spacing:-.02em;text-wrap:balance;margin:0}
+.eyebrow{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--cabbage)}
+
+/* NAV */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--cabbage);color:#fff}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.brand{font-family:var(--f-display);font-weight:800;font-size:1.6rem;text-decoration:none;letter-spacing:-.03em}
+.brand span{color:var(--bread)}
+.nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0;font-weight:500;font-size:.95rem}
+.nav ul a{text-decoration:none;opacity:.85}
+.nav ul a:hover{opacity:1;text-decoration:underline;text-underline-offset:4px}
+.nav .cta{background:var(--bread);color:#2a1a00;font-weight:700;text-decoration:none;padding:8px 16px;border-radius:999px;font-size:.9rem;white-space:nowrap}
+@media(max-width:760px){.nav ul{display:none}}
+
+/* HERO */
+.hero{position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center;padding-block:56px 72px}
+.hero h1{font-size:clamp(3rem,8.5vw,6.8rem);margin:16px 0 22px}
+.hero h1 .out{color:var(--muted);font-weight:500}
+.hero h1 .in{color:var(--cabbage);display:inline-block;position:relative}
+.hero h1 .in::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.16em;background:var(--bread);z-index:-1;transform-origin:left;animation:swipe .9s .5s cubic-bezier(.2,.7,.2,1) both}
+@keyframes swipe{from{transform:scaleX(0)}}
+.lead{font-size:1.15rem;max-width:38ch;color:var(--muted);margin:0 0 28px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:14px;font-weight:700;text-decoration:none;transition:transform .15s,box-shadow .15s;border:2px solid var(--fg)}
+.btn-main{background:var(--cabbage);color:#fff;border-color:var(--cabbage);box-shadow:4px 4px 0 var(--fg)}
+.btn-main:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--fg)}
+.btn-alt{background:var(--surface);color:var(--fg);box-shadow:4px 4px 0 var(--fg)}
+.btn-alt:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--fg)}
+.services{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.services span{font-size:.85rem;font-weight:500;background:var(--surface);border:1px solid var(--line);padding:6px 12px;border-radius:999px}
+.services span::before{content:"✓ ";color:var(--herb);font-weight:700}
+.hero-in>*{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+.hero-in>*:nth-child(2){animation-delay:.07s}.hero-in>*:nth-child(3){animation-delay:.14s}.hero-in>*:nth-child(4){animation-delay:.21s}.hero-in>*:nth-child(5){animation-delay:.28s}
+@keyframes rise{from{transform:translateY(16px);opacity:.01}}
+
+.spit{position:relative;width:min(400px,100%);max-width:100%;aspect-ratio:4/5;justify-self:center}
+.spit .glow{position:absolute;right:2%;top:14%;width:22%;height:66%;border-radius:14px;background:repeating-linear-gradient(0deg,#ff7a3c 0 10px,#e04a2f 10px 14px);box-shadow:0 0 50px 10px rgba(255,110,50,.45);animation:heat 1.8s ease-in-out infinite}
+@keyframes heat{50%{box-shadow:0 0 70px 18px rgba(255,110,50,.6)}}
+.spit svg.cone{position:absolute;left:8%;top:6%;width:62%;height:84%;overflow:visible}
+.meat-stripes{animation:rotate 2.4s linear infinite}
+@keyframes rotate{to{transform:translateX(-40px)}}
+.knife{transform-origin:85% 50%;animation:shave 1.6s ease-in-out infinite}
+@keyframes shave{0%,100%{transform:translateY(-30px) rotate(-8deg)}50%{transform:translateY(40px) rotate(4deg)}}
+.slice{position:absolute;left:46%;top:60%;width:22px;height:8px;border-radius:4px;background:#9b4a22;animation:fall 1.6s ease-in infinite;opacity:0}
+.slice:nth-of-type(2){animation-delay:.5s;left:50%}.slice:nth-of-type(3){animation-delay:1s;left:43%}
+@keyframes fall{0%{opacity:0;transform:translateY(0) rotate(0)}15%{opacity:1}100%{opacity:0;transform:translateY(120px) rotate(160deg)}}
+.sticker{position:absolute;display:grid;place-items:center;text-align:center;border-radius:50%;font-family:var(--f-display);font-weight:800;line-height:1;box-shadow:3px 3px 0 var(--fg);border:2px solid var(--fg)}
+.s1{width:118px;height:118px;left:-4%;bottom:6%;background:var(--bread);color:#2a1a00;font-size:1.05rem;animation:wob 6s ease-in-out infinite}
+.s1 b{font-size:2rem;display:block}
+.s2{width:104px;height:104px;right:-2%;top:-2%;background:var(--herb);color:#fff;font-size:.95rem;animation:wob 7s ease-in-out infinite reverse}
+@keyframes wob{0%,100%{transform:rotate(-10deg)}50%{transform:rotate(6deg) scale(1.04)}}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr;padding-block:36px 56px}.spit{width:min(300px,82%)}.s1{width:96px;height:96px;font-size:.9rem}.s1 b{font-size:1.6rem}.s2{width:88px;height:88px;font-size:.8rem}}
+
+/* TICKER */
+.ticker{background:var(--fg);color:var(--bg);overflow:hidden;white-space:nowrap;font-family:var(--f-display);font-weight:800;font-size:1.5rem;padding-block:12px;transform:rotate(-1.2deg);margin-inline:-20px}
+.ticker div{display:inline-flex;gap:34px;animation:tick 26s linear infinite;padding-left:34px}
+.ticker span::after{content:"✦";margin-left:34px;color:var(--bread)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+section{padding-block:96px}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.head h2{font-size:clamp(2.4rem,6vw,4.2rem);margin-top:10px}
+.head p{max-width:42ch;color:var(--muted);margin:0}
+
+/* HIGHLIGHTS */
+.hl{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.hl-card{position:relative;border-radius:26px;padding:30px;min-height:300px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;border:2px solid var(--fg);box-shadow:6px 6px 0 var(--fg);transition:transform .2s,box-shadow .2s}
+.hl-card:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--fg)}
+.hl-card h3{font-size:clamp(1.7rem,3.4vw,2.4rem);position:relative}
+.hl-card p{margin:8px 0 0;position:relative;max-width:34ch}
+.hl-card svg{position:absolute;right:-6%;top:-6%;width:62%;max-width:100%;transition:transform .5s}
+.hl-card:hover svg{transform:rotate(-6deg) scale(1.05)}
+.hl-a{background:var(--bread);color:#2a1a00}
+.hl-b{background:var(--herb);color:#fff}
+.tag{display:inline-block;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;background:rgba(0,0,0,.18);padding:4px 10px;border-radius:999px;margin-bottom:12px;position:relative;align-self:flex-start}
+@media(max-width:760px){.hl{grid-template-columns:1fr}}
+
+/* BUILDER */
+.builder{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:start}
+.step{margin-bottom:22px}
+.step h3{font-size:1.25rem;margin-bottom:10px;display:flex;gap:10px;align-items:center}
+.step h3 i{font-style:normal;font-family:var(--f-mono);font-size:.8rem;background:var(--fg);color:var(--bg);width:26px;height:26px;border-radius:50%;display:grid;place-items:center}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opts button{font:inherit;font-weight:500;font-size:.95rem;border:2px solid var(--line);background:var(--surface);color:var(--fg);padding:9px 16px;border-radius:12px;cursor:pointer;transition:all .15s}
+.opts button:hover{border-color:var(--fg)}
+.opts button[aria-pressed="true"]{background:var(--cabbage);border-color:var(--cabbage);color:#fff}
+.order{position:sticky;top:calc(env(safe-area-inset-top,0px) + 84px);background:var(--surface);border:2px solid var(--fg);border-radius:24px;padding:26px;box-shadow:6px 6px 0 var(--fg)}
+.order .eyebrow{color:var(--herb)}
+.order h3{font-size:2rem;margin:8px 0 14px}
+.layers{display:flex;flex-direction:column;gap:4px;margin:18px 0}
+.layer{height:16px;border-radius:8px;animation:drop .4s cubic-bezier(.3,1.4,.5,1) both}
+@keyframes drop{from{transform:translateY(-14px) scaleX(.8);opacity:.01}}
+.order ul{margin:0;padding-left:18px;color:var(--muted)}
+.order .hint{font-size:.85rem;color:var(--muted);margin-top:14px}
+@media(max-width:860px){.builder{grid-template-columns:1fr}.order{position:static}}
+
+/* MENU LIST */
+.menu{display:grid;grid-template-columns:repeat(3,1fr);gap:0 40px;margin-top:56px}
+.menu h3{font-size:1.4rem;margin-bottom:6px;padding-bottom:10px;border-bottom:3px solid var(--fg)}
+.menu ul{list-style:none;margin:0;padding:0}
+.menu li{padding-block:12px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:12px}
+.menu li small{display:block;color:var(--muted);font-size:.86rem}
+.note{margin-top:18px;font-size:.85rem;color:var(--muted)}
+@media(max-width:860px){.menu{grid-template-columns:1fr;gap:32px}}
+
+/* REVIEWS */
+.reviews{background:var(--cabbage);color:#fff}
+.reviews .eyebrow{color:#ffd9ef}
+.reviews .head p{color:#f3d6e8}
+.bigscore{display:flex;align-items:end;gap:14px}
+.bigscore b{font-family:var(--f-display);font-weight:800;font-size:clamp(4.5rem,12vw,7.5rem);line-height:.85;color:var(--bread)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rev{background:#fff;color:#1d1622;border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:14px;transform:rotate(var(--r,0deg));transition:transform .25s;border:2px solid #1d1622;box-shadow:5px 5px 0 #1d1622}
+.rev:hover{transform:rotate(0) translateY(-4px)}
+.rev .stars{color:var(--bread);letter-spacing:2px;-webkit-text-stroke:.5px #8a5a00}
+.rev q{font-family:var(--f-display);font-weight:500;font-size:1.25rem;line-height:1.25;quotes:"„" "“"}
+.rev footer{margin-top:auto;font-size:.88rem;color:#6a5f6e}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}
+.chips span{font-family:var(--f-mono);font-size:.8rem;border:1px solid rgba(255,255,255,.35);padding:6px 12px;border-radius:999px}
+.chips b{color:var(--bread);font-weight:500}
+@media(max-width:860px){.rev-grid{grid-template-columns:1fr}.rev{--r:0deg!important}}
+
+/* VISIT */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.card{background:var(--surface);border:2px solid var(--fg);border-radius:24px;padding:30px}
+.card h3{font-size:2rem;margin-bottom:12px}
+.row{display:grid;grid-template-columns:120px 1fr;gap:12px;padding-block:12px;border-bottom:1px solid var(--line)}
+.row:last-child{border:0}
+.row dt{color:var(--muted);font-size:.9rem}
+.row dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.mono{font-family:var(--f-mono);font-size:.95rem}
+.copy{font:inherit;font-size:.78rem;margin-left:8px;border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:999px;padding:2px 10px;cursor:pointer}
+.live{display:inline-flex;align-items:center;gap:8px;font-weight:700}
+.live i{width:9px;height:9px;border-radius:50%;background:var(--herb);animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(47,138,76,.6)}70%{box-shadow:0 0 0 9px rgba(47,138,76,0)}100%{box-shadow:0 0 0 0 rgba(47,138,76,0)}}
+.mapcard{position:relative;overflow:hidden;background:var(--bread);color:#2a1a00;display:flex;flex-direction:column;justify-content:flex-end;min-height:340px;text-decoration:none}
+.mapcard svg{position:absolute;inset:0;width:100%;height:100%}
+.mapcard>*:not(svg){position:relative}
+.pin{position:absolute;left:44%;top:38%;width:24px;height:24px;border-radius:50% 50% 50% 0;background:var(--cabbage);transform:rotate(-45deg);border:3px solid #fff;animation:bounce 1.6s ease-in-out infinite}
+@keyframes bounce{50%{translate:0 -10px}}
+@media(max-width:860px){.visit{grid-template-columns:1fr}.row{grid-template-columns:96px 1fr}}
+
+footer.site{padding-block:40px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+footer.site .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+
+<nav class="nav" aria-label="Hauptnavigation">
+  <div class="wrap">
+    <a class="brand" href="#top">Ala<span>turka</span></a>
+    <ul>
+      <li><a href="#highlights">Highlights</a></li>
+      <li><a href="#bauen">Döner bauen</a></li>
+      <li><a href="#stimmen">Bewertungen</a></li>
+      <li><a href="#besuch">Anfahrt</a></li>
+    </ul>
+    <a class="cta" href="#besuch">Jetzt bestellen</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-in">
+      <div class="eyebrow">Türkisches Restaurant · Bahnhofstraße 4 · Nürtingen</div>
+      <h1><span class="out">Außen unscheinbar.</span><br>Innen <span class="in">richtig</span> Döner.</h1>
+      <p class="lead">Saftiger Drehspieß, knackiges Gemüse, Falafel mit veganer Soße und Portionen, die satt machen. Mitten in Nürtingen, direkt beim Bahnhof.</p>
+      <div class="actions">
+        <a class="btn btn-main" href="#bauen">Döner zusammenstellen →</a>
+        <a class="btn btn-alt" href="https://www.google.com/maps/search/?api=1&query=Alaturka+Bahnhofstra%C3%9Fe+4+72622+N%C3%BCrtingen" target="_blank" rel="noopener">Route planen</a>
+      </div>
+      <div class="services"><span>Vor Ort essen</span><span>Zum Mitnehmen</span><span>Lieferdienst</span><span>Online bestellen</span></div>
+    </div>
+    <div class="spit" aria-hidden="true">
+      <div class="glow"></div>
+      <svg class="cone" viewBox="0 0 200 300">
+        <defs>
+          <clipPath id="coneclip"><path d="M40 30h120l-22 230H62Z"/></clipPath>
+          <linearGradient id="shade" x1="0" x2="1"><stop offset="0" stop-color="#000" stop-opacity=".35"/><stop offset=".45" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".25"/></linearGradient>
+        </defs>
+        <rect x="96" y="0" width="8" height="300" rx="4" fill="#a7adb8"/>
+        <g clip-path="url(#coneclip)">
+          <rect x="0" y="20" width="260" height="260" fill="#a5532a"/>
+          <g class="meat-stripes" fill="#7c3516">
+            <rect x="0" y="20" width="12" height="260"/><rect x="40" y="20" width="12" height="260"/><rect x="80" y="20" width="12" height="260"/><rect x="120" y="20" width="12" height="260"/><rect x="160" y="20" width="12" height="260"/><rect x="200" y="20" width="12" height="260"/><rect x="240" y="20" width="12" height="260"/>
+          </g>
+          <g fill="#d9844a" opacity=".55"><rect x="0" y="70" width="260" height="5"/><rect x="0" y="130" width="260" height="5"/><rect x="0" y="190" width="260" height="5"/><rect x="0" y="240" width="260" height="5"/></g>
+          <rect x="0" y="20" width="260" height="260" fill="url(#shade)"/>
+        </g>
+        <ellipse cx="100" cy="30" rx="60" ry="9" fill="#c8693a"/>
+        <rect x="56" y="262" width="88" height="14" rx="4" fill="#5a5f6a"/>
+        <g class="knife">
+          <rect x="128" y="132" width="70" height="10" rx="3" fill="#dfe3ea"/>
+          <rect x="196" y="128" width="34" height="18" rx="6" fill="#1d1622"/>
+        </g>
+      </svg>
+      <span class="slice"></span><span class="slice"></span><span class="slice"></span>
+      <div class="sticker s1"><div><b>4,6</b>★ 695×</div></div>
+      <div class="sticker s2"><div>Vegane<br>Soße</div></div>
+    </div>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true"><div>
+  <span>Döner</span><span>Dürüm</span><span>Falafel</span><span>Dönerteller</span><span>Grillgemüse</span><span>Lahmacun</span><span>Pide</span><span>Ayran</span>
+  <span>Döner</span><span>Dürüm</span><span>Falafel</span><span>Dönerteller</span><span>Grillgemüse</span><span>Lahmacun</span><span>Pide</span><span>Ayran</span>
+</div></div>
+
+<main>
+<section id="highlights">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow">Die Lieblinge unserer Gäste</div><h2>Vom Drehspieß.</h2></div>
+      <p>Die zwei Gerichte, nach denen am häufigsten gefragt wird. Frisch geschnitten, großzügig portioniert.</p>
+    </div>
+    <div class="hl">
+      <article class="hl-card hl-a">
+        <svg viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="90" fill="#fff" opacity=".9"/><circle cx="100" cy="100" r="74" fill="#fff8e6"/>
+          <g fill="#f2c94c"><rect x="40" y="60" width="10" height="50" rx="3" transform="rotate(-20 45 85)"/><rect x="54" y="56" width="10" height="54" rx="3" transform="rotate(-8 59 83)"/><rect x="68" y="58" width="10" height="50" rx="3" transform="rotate(6 73 83)"/><rect x="46" y="70" width="10" height="46" rx="3" transform="rotate(14 51 93)"/></g>
+          <g fill="#9b4a22"><path d="M96 90c20-10 46-8 60 6-10 18-44 24-62 10Z"/><path d="M100 110c18-6 40 0 50 12-14 14-40 14-52 0Z" opacity=".85"/></g>
+          <g fill="#3f8a3a"><circle cx="70" cy="140" r="12"/><circle cx="90" cy="150" r="10"/></g><g fill="#8a2468"><circle cx="112" cy="146" r="10"/><circle cx="128" cy="138" r="8"/></g><circle cx="140" cy="62" r="10" fill="#e04a2f"/></svg>
+        <span class="tag">Highlight</span>
+        <h3>Döner Teller mit Pommes &amp; Salat</h3>
+        <p>Frisch vom Drehspieß, dazu knusprige Pommes, Salat und Soße nach Wahl.</p>
+      </article>
+      <article class="hl-card hl-b">
+        <svg viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="90" fill="#fff" opacity=".9"/><circle cx="100" cy="100" r="74" fill="#f2f7ef"/>
+          <g fill="#9b4a22"><path d="M54 80c20-12 50-10 66 6-12 20-48 24-66 8Z"/></g>
+          <g><rect x="110" y="96" width="34" height="14" rx="7" fill="#e04a2f"/><rect x="104" y="116" width="40" height="14" rx="7" fill="#f2b632"/><rect x="62" y="118" width="36" height="14" rx="7" fill="#3f8a3a"/><ellipse cx="86" cy="146" rx="20" ry="9" fill="#6b3f8a"/><path d="M118 140c10-4 22 0 26 8" stroke="#5a8f3a" stroke-width="6" fill="none" stroke-linecap="round"/></g></svg>
+        <span class="tag">Highlight</span>
+        <h3>Döner mit Grillgemüse</h3>
+        <p>Zartes Fleisch mit Zucchini, Paprika, Aubergine und Tomate vom Grill. Auf Wunsch mit Reis.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="bauen" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow">Interaktiv</div><h2>Bau deinen Döner.</h2></div>
+      <p>Stell dir deine Bestellung zusammen und sag sie einfach an der Theke oder am Telefon durch.</p>
+    </div>
+    <div class="builder">
+      <div>
+        <div class="step"><h3><i>1</i>Wie?</h3><div class="opts" data-key="base">
+          <button type="button" aria-pressed="true">Döner im Brot</button><button type="button" aria-pressed="false">Dürüm</button><button type="button" aria-pressed="false">Teller</button><button type="button" aria-pressed="false">Box</button></div></div>
+        <div class="step"><h3><i>2</i>Füllung</h3><div class="opts" data-key="fill">
+          <button type="button" aria-pressed="true">Kalb</button><button type="button" aria-pressed="false">Hähnchen</button><button type="button" aria-pressed="false">Falafel</button><button type="button" aria-pressed="false">Nur Gemüse</button></div></div>
+        <div class="step"><h3><i>3</i>Extras</h3><div class="opts" data-key="extra" data-multi="1">
+          <button type="button" aria-pressed="true">Salat</button><button type="button" aria-pressed="true">Rotkohl</button><button type="button" aria-pressed="false">Zwiebeln</button><button type="button" aria-pressed="false">Grillgemüse</button><button type="button" aria-pressed="false">Schafskäse</button><button type="button" aria-pressed="false">Scharf</button></div></div>
+        <div class="step"><h3><i>4</i>Soße</h3><div class="opts" data-key="sauce">
+          <button type="button" aria-pressed="true">Knoblauch</button><button type="button" aria-pressed="false">Kräuter</button><button type="button" aria-pressed="false">Scharfe Soße</button><button type="button" aria-pressed="false">Vegane Soße</button></div></div>
+      </div>
+      <aside class="order" aria-live="polite">
+        <div class="eyebrow">Deine Bestellung</div>
+        <h3 id="o-title">Döner im Brot mit Kalb</h3>
+        <div class="layers" id="o-layers"></div>
+        <ul id="o-list"></ul>
+        <p class="hint">Bestellen: an der Theke, telefonisch unter <span class="mono">07022 2165757</span> oder per Lieferdienst.</p>
+      </aside>
+    </div>
+
+    <div class="menu">
+      <div><h3>Döner &amp; Dürüm</h3><ul>
+        <li><span>Döner im Brot<small>Kalb oder Hähnchen</small></span></li>
+        <li><span>Dürüm<small>Im Yufka gerollt</small></span></li>
+        <li><span>Falafel-Döner<small>Mit Gemüse und veganer Soße</small></span></li>
+        <li><span>Döner Box<small>Mit Pommes</small></span></li>
+      </ul></div>
+      <div><h3>Teller</h3><ul>
+        <li><span>Döner Teller<small>Mit Pommes und Salat</small></span></li>
+        <li><span>Döner mit Grillgemüse<small>Mit Reis oder Pommes</small></span></li>
+        <li><span>Falafel Teller<small>Mit Humus und Salat</small></span></li>
+        <li><span>Gemüse Teller<small>Vegetarisch</small></span></li>
+      </ul></div>
+      <div><h3>Dazu</h3><ul>
+        <li><span>Lahmacun<small>Türkische Pizza</small></span></li>
+        <li><span>Pommes<small>Klassisch</small></span></li>
+        <li><span>Ayran<small>Kühl</small></span></li>
+        <li><span>Çay<small>Türkischer Tee</small></span></li>
+      </ul></div>
+    </div>
+    <p class="note">Auswahl. Die vollständige Karte mit Preisen gibt es vor Ort. Schüler bekommen ein günstiges Döner-Angebot, frag einfach an der Theke.</p>
+  </div>
+</section>
+
+<section class="reviews" id="stimmen">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow">Google-Rezensionen</div><h2>695 Gäste.<br>Eine Meinung.</h2></div>
+      <div class="bigscore"><b>4,6</b><p style="margin:0">von 5 Sternen<br>aus 695 Bewertungen</p></div>
+    </div>
+    <div class="rev-grid">
+      <article class="rev" style="--r:-1.5deg"><q>Schon lange keinen so leckeren Döner mehr in der Umgebung gegessen.</q><footer>Murat Ö. · Local Guide</footer></article>
+      <article class="rev" style="--r:1deg"><q>Döner mit Falafel und Gemüse, super lecker und mit veganer Soße.</q><footer>Google-Rezension</footer></article>
+      <article class="rev" style="--r:-.5deg"><q>Der Döner war sehr saftig und sehr lecker. Vor allem das Schülerangebot ist sehr gut.</q><footer>Erik P.</footer></article>
+      <article class="rev" style="--r:1.2deg"><q>Dönerteller mit gegrilltem Gemüse und Reis. Sehr lecker, sehr freundliches Personal.</q><footer>Marko Q.</footer></article>
+      <article class="rev" style="--r:-1deg"><q>Netter Verkäufer, extrem entspannte Atmosphäre.</q><footer>Google-Rezension</footer></article>
+      <article class="rev" style="--r:.6deg"><q>Ich hab früher in Nürtingen gearbeitet und bin hier regelmäßig essen gewesen.</q><footer>Google-Rezension</footer></article>
+    </div>
+    <div class="chips"><span>döner <b>153</b></span><span>gemüse <b>30</b></span><span>falafel <b>15</b></span><span>lokal <b>10</b></span></div>
+  </div>
+</section>
+
+<section id="besuch">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="eyebrow">Anfahrt &amp; Kontakt</div><h2>Komm vorbei.</h2></div>
+      <p>Vor Ort essen, mitnehmen oder liefern lassen.</p>
+    </div>
+    <div class="visit">
+      <div class="card">
+        <h3>Alaturka</h3>
+        <dl style="margin:0">
+          <div class="row"><dt>Adresse</dt><dd>Bahnhofstraße 4<br>72622 Nürtingen</dd></div>
+          <div class="row"><dt>Telefon</dt><dd><a class="mono" href="tel:+4970222165757" id="phone">07022 2165757</a><button class="copy" id="copyPhone" type="button">Kopieren</button></dd></div>
+          <div class="row"><dt>Heute</dt><dd><span class="live"><i></i>Geöffnet bis 21:00 Uhr</span></dd></div>
+          <div class="row"><dt>Preis</dt><dd>10–20 € pro Person</dd></div>
+          <div class="row"><dt>Social</dt><dd><a href="https://m.facebook.com" target="_blank" rel="noopener">Facebook</a></dd></div>
+          <div class="row"><dt>Plus Code</dt><dd class="mono">J8GR+PV Nürtingen</dd></div>
+        </dl>
+      </div>
+      <a class="card mapcard" href="https://www.google.com/maps/search/?api=1&query=Alaturka+Bahnhofstra%C3%9Fe+4+72622+N%C3%BCrtingen" target="_blank" rel="noopener">
+        <svg viewBox="0 0 400 340" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="400" height="340" fill="#f2b632"/>
+          <g stroke="#fff" stroke-width="16" fill="none" stroke-linecap="round" opacity=".55"><path d="M-10 130 C120 120 260 150 420 110"/><path d="M170 -10 C180 120 160 220 190 360"/><path d="M-10 40 C120 70 260 30 420 60"/></g>
+          <g stroke="#1d1622" stroke-width="3" stroke-dasharray="12 8" fill="none" opacity=".35"><path d="M-10 230 C140 220 260 240 420 225"/></g>
+          <path d="M-10 305 C120 285 260 320 420 290" stroke="#2f8a4c" stroke-width="22" fill="none" opacity=".35"/>
+        </svg>
+        <span class="pin" aria-hidden="true"></span>
+        <div class="eyebrow" style="color:#2a1a00">Bahnhofstraße 4</div>
+        <h3 style="font-size:2.2rem;margin:8px 0 6px">Route öffnen ↗</h3>
+        <span style="font-size:.95rem">Ein paar Schritte vom Bahnhof Nürtingen</span>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© Alaturka · Türkisches Restaurant · Nürtingen</span>
+    <span>Bahnhofstraße 4 · 07022 2165757</span>
+  </div>
+</footer>
+
+<script>
+const COL={"Döner im Brot":"#e8b45a","Dürüm":"#f0d6a0","Teller":"#e6e2dc","Box":"#d8c7a8","Kalb":"#9b4a22","Hähnchen":"#c9803f","Falafel":"#7a6a2c","Nur Gemüse":"#5aa95a","Salat":"#7fbf5a","Rotkohl":"#8a2468","Zwiebeln":"#efe1f0","Grillgemüse":"#d9a03a","Schafskäse":"#fbf7ec","Scharf":"#e04a2f","Knoblauch":"#f7f3e8","Kräuter":"#b9dba3","Scharfe Soße":"#c8361f","Vegane Soße":"#d8e8c0"};
+function update(){
+  const pick=k=>[...document.querySelectorAll(`[data-key="${k}"] [aria-pressed="true"]`)].map(b=>b.textContent);
+  const base=pick('base')[0],fill=pick('fill')[0],extra=pick('extra'),sauce=pick('sauce')[0];
+  document.getElementById('o-title').textContent=`${base} mit ${fill}`;
+  const layers=[base,fill,...extra,sauce,base];
+  document.getElementById('o-layers').innerHTML=layers.map((l,i)=>`<div class="layer" style="background:${COL[l]||'#ccc'};animation-delay:${i*50}ms;border:1px solid rgba(0,0,0,.12);${i===0||i===layers.length-1?'height:22px;border-radius:12px':''}"></div>`).join('');
+  document.getElementById('o-list').innerHTML=[`Füllung: ${fill}`,`Extras: ${extra.length?extra.join(', '):'keine'}`,`Soße: ${sauce}`].map(x=>`<li>${x}</li>`).join('');
+}
+document.querySelectorAll('.opts').forEach(g=>g.addEventListener('click',e=>{
+  const b=e.target.closest('button');if(!b)return;
+  if(g.dataset.multi){b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')!=='true')}
+  else g.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+  update();
+}));
+update();
+
+document.getElementById('copyPhone').addEventListener('click',e=>{
+  const btn=e.currentTarget;
+  const sel=()=>{const r=document.createRange();r.selectNodeContents(document.getElementById('phone'));const s=getSelection();s.removeAllRanges();s.addRange(r)};
+  try{navigator.clipboard.writeText('07022 2165757').then(()=>{btn.textContent='Kopiert';setTimeout(()=>btn.textContent='Kopieren',1600)}).catch(sel)}catch(_){sel()}
+});
+</script>
+
+</body></html>
